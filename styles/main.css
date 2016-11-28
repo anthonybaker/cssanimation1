@@ -1,0 +1,41 @@
+body {
+    background-color: #A2BFCE;
+}
+
+.cloud {
+    position: absolute;
+}
+
+#bigcloud {
+	
+	/* Full Shorthand properties */
+	/* animation: <animation-name> <animation-duration> <animation-timing-function> <animation-delay> <animation-iteration-count> <animation-direction> <animation-fill-mode>; */
+
+	/* short form to specify the animation 
+	animation: bobble 2s infinite;
+	*/
+
+	/* Long form */
+	animation-name: bobble;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+#smallcloud {
+    animation: bobble 4s infinite;
+}
+
+
+@keyframes bobble {
+    0% {
+        transform: translate3d(50px, 40px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(50px, 50px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(50px, 40px, 0px);
+    }
+}
